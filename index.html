@@ -365,8 +365,8 @@ li{
    
   </body>
   <script>
-   $(window).ready(function() {
-    $("#overlay").fadeOut("slow");
-});
+  $(window).bind("load", function () {
+        $('#overlay').fadeOut(100);
+    });
   </script>
 </html>

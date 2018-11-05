@@ -2,31 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    
-    <meta name="viewport" content="width=device-width ,initial-sacle=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   
+
   	<script rel="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
 
     <title>My Portfolio</title>
-	  <link rel="icon" type="image/ico" href="logo.jpg" style="width:16px;height: 16px;"/>
+    <link rel="icon" type="image/ico" href="logo.jpg"/>
     <style>
 
 
+     @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+     {
+        width: 100%;
+    }
+}
+
+
   	.affix {
-  			      top: 0;
+  			      top: 0px;
   			      width: 100%;
-  			      z-index: 9999 !important;
+  			      z-index: 9999 ;
     				}
 
     .affix + .container
     	{
-          padding-top:0px;
+          padding:0px;
     	}
 
 
@@ -35,24 +41,18 @@
       height: 100%;
       background: #230029;
     }
-    *
-    {
-      box-sizing: border-box;
-    }
+    
     .body
     {
+  
+     height: 100%;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       overflow-y: hidden;
+      width:100%;
     }
-    #particles-js
-        {
-          background: #230029;
-          height: 100%;
-          align-items: center;
-          text-align: center;
-        }
+    
     .fullscreen-wrap{
 
       position: absolute;
@@ -64,13 +64,7 @@
       text-align: center;
       float: center;
     }
-    .fullscreen-wrap p{
-      position:relative;top:50%;
-      opacity:1;
-    }
-    .fullscreen-wrap h2{
-      position:relative;top:50%;
-    }
+    
     #nav a:hover
     {
       color:#09f;
@@ -119,7 +113,7 @@
         }
 
 .about{
-  padding: 50px;
+  padding: auto;
 }
 
 ::-webkit-scrollbar
@@ -141,7 +135,7 @@ width:5px;
 
 .gallery img
 {
-  padding :5px;
+  padding :auto;
   opacity:.5;
   transition: 1s;
 }
@@ -159,6 +153,54 @@ li{
   font-size:20px;
 
 }
+
+ @media only screen and (max-width: 800px)
+            {
+            	#overlay{
+            		width: 100vw;
+            		height: 100vh;
+            	}
+            	#container{
+            		width: 150px;
+            		height: 150px;
+            	}
+            	.gallery{
+            		width: 80%;
+            		height: 900px;
+            	}
+            	#about{
+            		width:80%;
+            		height:900px;
+            	}
+            	.container{
+            		width: 80%;
+            		height:100px;
+            	}
+            	#img_new{
+            		width:80%;
+            		height: 50px;
+            	}
+              #overlay
+              {
+                width: 100%;
+                height: 100%;
+              }
+              .navbar
+              {
+                data-offset="400";
+              }
+              #name
+              {
+              	position: absolute;
+              	top: 0px;
+              	font-size: 16px;
+              }
+              #profile
+              {
+              	font-size: 8px;
+              }
+              
+            }
 	</style>
   <script>
       $(document).ready(function(){
@@ -180,7 +222,15 @@ li{
   </head>
   <body>
     <body >
+    	<div id="particles-js">
 
+
+              <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+              <script type="text/javascript" src="js/particles.js"></script>
+              <script type="text/javascript" src="js/demo/js/app.js"></script>
+              <p id="name" style="color:white;font-size:64px;position:absolute;top:45%;left:32%;background:#230029;">Hello,I'm <span style="color:#3498db">Atulya Raj.</span></p>
+              <p id="profile" style="position:absolute;top:60%;left:40%;color:white;font-size:32px;background:#230029;">Welcome to my <span style="color:#3498db">Profile.</span></p>
+            </div>
 
       <div id="overlay">
         <div id="container">
@@ -197,40 +247,50 @@ li{
       </div>
 
 
-          <header id="particles-js" >
-            <div class="fullscreen-wrap">
-
-              <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-              <script type="text/javascript" src="js/particles.js"></script>
-              <script type="text/javascript" src="js/demo/js/app.js"></script>
-              <p style="color:white;font-size:64px;position:relative;top:50%;background:#230029;opacity:1;">Hello,I'm <span style="color:#3498db">Atulya Raj.</span></p>
-              <h2 style="color:white;font-size:32px;background:#230029;opacity:1;">Welcome to my <span style="color:#3498db">Profile.</span></h2>
-            </div>
-          </header>
 
 
-          <nav class="navbar navbar-inverse" id="navigator"	data-spy="affix" data-offset-top="675">
-          		<ul class="nav navbar-nav ">
-          			<li class="active"><a href="#">HOME</a></li>
-          			<li id="nav" > <a href="#about" >ABOUT</a></li>
-          			<li id="nav"><a href="#gallery">PORTFOLIO</a></li>
-          			<li id="nav"><a href="#contact">CONTACT</a></li>
-          		</ul>
-  	      </nav>
-    <div class="container-fluid" id="about" style="background-image:url('scene1.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
+
+          <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="800">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container" id="about" style="background-image:url('scene2.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
     <div class="container" style="height:100vh;text-align:center;">
     <div class="about" style="text-align:center;">
-      <h1 style="color:#230029;padding-bottom: 3px;font-size:64px;">A<u>BOU</u>T</h1>
+      <h1 style="color:#fff;padding-bottom: 3px;font-size:64px;">ABOUT</h1>
       <div class="col-sm-6">
         <img src="1.jpg" alt="pic" class="img_cls" style="width:100px;height:100px;"></img>
         <h2  style="color:#09f;padding-bottom: 3px;font-size:32px;">Who am I?</h2>
-        <p style="font-size:20px;">I'm a 2nd year CSE student at <span style="color:#3498db">MANIT,Bhopal.</span></p>
-        <p style="font-size:20px;">I'm interested in <span style="color:#3498db">Programming,
+        <p style="font-size:20px;color:#fff">I'm a 2nd year CSE student at <span style="color:#3498db">MANIT,Bhopal.</span></p>
+        <p style="font-size:20px;color:#fff">I'm interested in <span style="color:#3498db">Programming,
           Web Development & Machine Learning.</span></p>
       </div>
       <div class="col-sm-6" style="text-align:center;">
         <h2 style="font-size:64px;color:#09f">SKILLS</h2>
-        <ul style="list-style-type:none">
+        <ul style="list-style-type:none;color:#fff">
           <li>C</li>
           <li>C++</li>
           <li>HTML/CSS</li>
@@ -243,13 +303,13 @@ li{
     </div>
 
       <div class="container" style="text-align:center;" >
-        <img src="capture.jpg" style="padding:100px;"></img>
+        <img src="capture.jpg"  id ="img_new" style="padding:100px;"></img>
       </div>
 
     </div>
 
 	  </div>
-    <div class="container-fluid" id="gallery" style="height:100vh;background-color:#230029;text-align:center;">
+    <div class="container-fluid" id="gallery" style="height:100vh;background-color:#230029;text-align:center;background-image:url('abc.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
 
       <h1 style="font-size:64px;color:#fff;">My Gallery</h1>
       <div class="gallery">
@@ -315,10 +375,9 @@ li{
       </div>
 
 	  </div>
-    <div class="container-fluid" id="about" style="background-image:url('scene1.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
+    <div class="container" id="about" style="background-image:url('scene1.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
     <div class="container" style="height:100vh;text-align:center;">
         <h1 style="color:#00BCD4;font-size:64px;" >What do I Like?</h1>
-        <h2 style="color:#00BCD4;font-size:32px;" >Many Things...</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 			       <!--Indicators-->
@@ -357,16 +416,18 @@ li{
     <div class="container-fluid" id="contact" style="height:30vh;background-color:#230029;text-align:center;">
         <h1 style="color:#fff;font-size:64px;"><u>Contact</u></h1>
         <p style="color:#00BCD4;float:center;">Want to work together?</p>
-        <p style="color:#03A9F4;float:center;">Mobile: 0123456789</p>
-        <p style="color:#03A9F4;float:center;">e-mail: loremipsum@gmail.com</p>
+        <p style="color:#03A9F4;float:center;">Mobile: 8986898904</p>
+        <p style="color:#03A9F4;float:center;">e-mail: atulya.raj2904@gmail.com</p>
         <p style="top:100%;color:white">Atulya Raj &copy 2018.</p>
 	  </div>
 
-   
+
   </body>
   <script>
-  $(window).bind("load", function () {
-        $('#overlay').fadeOut(2000);
-    });
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#overlay").slideUp();
+        }, 1500);
+    })
   </script>
 </html>

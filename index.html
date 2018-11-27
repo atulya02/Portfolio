@@ -153,6 +153,10 @@ li{
   font-size:20px;
 
 }
+#gallery
+{
+	height:100vh;background-color:#230029;text-align:center;background-image:url('abc.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;
+}
  #name
               {
               	font-size:64px;position:absolute;top:45%;left:32%;
@@ -162,9 +166,79 @@ li{
               	position:absolute;top:60%;left:40%;color:white;font-size:32px;
               }
 
-
+              #img_gal1
+              {
+              	padding:20px;padding-bottom:50px;
+              }
+				#img_gal2
+              {
+              	padding:20px;padding-bottom:50px;
+              }
+              #img_gal3
+              {
+              	padding:20px;padding-bottom:50px;
+              }
+              #img_gall
+              {
+              	width:300px;
+              }
+              #skill
+              {
+              	font-size: 64px;
+              }
+              #about
+              {
+              	width:100vw;height:100vh
+              }
+				#introabout
+				{
+				padding-bottom: 3px;font-size:64px;
+				}
+				#details
+				{
+					font-size:20px;
+				}
+				#about1
+				{
+					width:100vw;height:100vh
+				}
  @media only screen and (max-width: 800px)
             {
+            	#about1
+            	{
+            		width: 100%;
+            		height: 800px;
+            	}
+            	#details
+				{
+					font-size:13.5px;
+					text-align: center;
+				}
+			#introabout
+				{
+				padding-bottom: 1.5px;font-size:32px;
+				}
+            	#skill
+            	{
+            		font-size: 25px;
+            		padding-top: 12px;
+            	}
+            	#img_gal1
+              {
+              	padding:5px;padding-bottom:25px;
+              }
+              ul
+              {
+              	text-align: center;
+              }
+              #img_gal2
+              {
+              	padding:5px;padding-bottom:25px;
+              }
+              #img_gal3
+              {
+              	padding:5px;padding-bottom:25px;
+              }
             	#overlay{
             		width: 100vw;
             		height: 100vh;
@@ -175,13 +249,20 @@ li{
             		height: 900px;
             	}
             	#about{
-            		width:80%;
-            		height:900px;
+            		height: 100%;
+            		width: 100%;
+            	}
+            	#gallery
+            	{
+            		height: 50%;
+            		width: 100%;
+            		text-align:center;background-image:url('abc.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;
             	}
 
             	#img_new{
             		width:80%;
             		height: 50px;
+            		width:50%;
             	}
 
 
@@ -207,6 +288,24 @@ li{
               #container1{
               	width: 150px;
               	height: 150px;
+              }
+              #intro1
+              {
+              	height: 200px;
+              	width:100%;
+              }
+              #intro2
+              {
+              	height: 200px;
+              	width:100%;
+              }
+              #intropic
+              {
+              	display: none;
+              }
+              #img_gall
+              {
+              	width:175px;
               }
             }
 	</style>
@@ -266,113 +365,114 @@ li{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#overlay">Home</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#about">About</a>
 
         </li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a class="dropdown-toggle" data-toggle="dropdown"  href="#gallery">Gallery</a></li>
+        <li><a href="#about1">Likes?</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#contact"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
+        
       </ul>
     </div>
   </div>
 </nav>
-    <div class="container" id="about" style="background-image:url('scene2.jpg');width:100vw;height:100vh;margin:0;padding:0;background-attachment:fixed;">
-    <div class="container" style="height:100vh;text-align:center;">
+    <div class="container" id="about" style="background-image:url('scene2.jpg');margin:0;padding:0;background-attachment:fixed;">
+    <div class="container" style="text-align:center;">
     <div class="about" style="text-align:center;">
-      <h1 style="color:#fff;padding-bottom: 3px;font-size:64px;">ABOUT</h1>
-      <div class="col-sm-6">
+      <h1 style="color:#fff;" id="introabout">ABOUT</h1>
+      <div class="col-sm-6" id="intro1">
         <img src="1.jpg" alt="pic" class="img_cls" style="width:100px;height:100px;"></img>
         <h2  style="color:#09f;padding-bottom: 3px;font-size:32px;">Who am I?</h2>
-        <p style="font-size:20px;color:#fff">I'm a 2nd year CSE student at <span style="color:#3498db">MANIT,Bhopal.</span></p>
-        <p style="font-size:20px;color:#fff">I'm interested in <span style="color:#3498db">Programming,
+        <p style="color:#fff" id="details">I'm a 2nd year CSE student at <span style="color:#3498db">MANIT,Bhopal.</span></p>
+        <p style="color:#fff" id="details">I'm interested in <span style="color:#3498db">Programming,
           Web Development & Machine Learning.</span></p>
       </div>
-      <div class="col-sm-6" style="text-align:center;">
-        <h2 style="font-size:64px;color:#09f">SKILLS</h2>
-        <ul style="list-style-type:none;color:#fff">
-          <li>C</li>
-          <li>C++</li>
-          <li>HTML/CSS</li>
-          <li>javaScript</li>
-          <li>jQuery</li>
-          <li>Basics of Python/Java</li>
+      <div class="col-sm-6" id="intro2" style="text-align:center;">
+        <h2 id="skill" style="color:#09f">SKILLS</h2>
+        <ul id="details" style="list-style-type:none;color:#fff">
+          <li id="details">C</li>
+          <li id="details">C++</li>
+          <li id="details">HTML/CSS</li>
+          <li id="details">javaScript</li>
+          <li id="details">jQuery</li>
+          <li id="details">Basics of Python/Java</li>
 
         </ul>
       </div>
-    </div>
-
-      <div  style="" >
+      <div  id="intropic" >
         <img src="capture.jpg"  id ="img_new" style=""></img>
       </div>
+    </div>
+
+      
 
     </div>
 
 	  </div>
-    <div class="container-fluid" id="gallery" style="height:100vh;background-color:#230029;text-align:center;background-image:url('abc.jpg');width:100%;margin:0;padding:0;background-attachment:fixed;">
+    <div class="container-fluid" id="gallery" style="">
 
       <h1 style="font-size:64px;color:#fff;">My Gallery</h1>
       <div class="gallery">
       <div class="row">
-        <div class="col-sm-4" style="padding:20px;padding-bottom:50px;">
+        <div class="col-sm-4" id="img_gal1" >
           <div class="img-responsive">
             <a href="images/1.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall" >
               </div>
             </a>
           </div>
         </div>
-        <div class="col-sm-4" style="padding:20px;padding-bottom:50px;">
+        <div class="col-sm-4" id="img_gal2" >
           <div class="img-responsive">
             <a href="images/2.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall">
               </div>
             </a>
           </div>
         </div>
-        <div class="col-sm-4" style="padding:20px;padding-bottom:50px;">
+        <div class="col-sm-4" id="img_gal3" style="">
           <div class="img-responsive">
             <a href="images/4.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall">
               </div>
             </a>
           </div>
         </div>
         <br>
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="img_gal3">
           <div class="img-responsive">
             <a href="images/4.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall">
               </div>
             </a>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="img_gal3">
           <div class="img-responsive">
             <a href="images/4.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall">
               </div>
             </a>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="img_gal3">
           <div class="img-responsive">
             <a href="images/4.jpg" data-lightbox="mygallery">
               <div class="img-thumbnail">
-               <img src="images/1.jpg" style="width:300px">
+               <img src="images/1.jpg" id="img_gall">
               </div>
             </a>
           </div>
@@ -383,7 +483,7 @@ li{
       </div>
 
 	  </div>
-    <div class="container" id="about" style="background-image:url('scene1.jpg');width:100vw;height:100vh;margin:0;padding:0;background-attachment:fixed;">
+    <div class="container" id="about1" style="background-image:url('scene1.jpg');margin:0;padding:0;background-attachment:fixed;">
     <div class="container" style="height:100vh;text-align:center;">
         <h1 style="color:#00BCD4;font-size:64px;" >What do I Like?</h1>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
